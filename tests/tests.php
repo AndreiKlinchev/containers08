@@ -2,8 +2,8 @@
 
 require_once __DIR__ . '/testframework.php';
 
-require_once __DIR__ . '/../site/modules/database.php';
-require_once __DIR__ . '/../site/modules/page.php';
+require_once __DIR__ . '/../modules/database.php';
+require_once __DIR__ . '/../modules/page.php';
 
 $tests = new TestFramework();
 
@@ -23,7 +23,7 @@ function createTestDatabase() {
     }
 
     $db = new Database($path);
-    $sql = file_get_contents(__DIR__ . '/../site/sql/schema.sql');
+    $sql = file_get_contents(__DIR__ . '/../sql/schema.sql');
     $parts = explode(';', $sql);
 
     foreach ($parts as $part) {
