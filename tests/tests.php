@@ -23,15 +23,10 @@ function createTestDatabase() {
     }
 
     $db = new Database($path);
-    $sql = file_get_contents(__DIR__ . '/../sql/schema.sql');
-    $parts = explode(';', $sql);
-
-    foreach ($parts as $part) {
-        $part = trim($part);
-        if ($part !== '') {
-            $db->Execute($part);
-        }
-    }
+    $db->Execute('CREATE TABLE page (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT)');
+    $db->Execute("INSERT INTO page (title, content) VALUES ('Page 1', 'Content 1')");
+    $db->Execute("INSERT INTO page (title, content) VALUES ('Page 2', 'Content 2')");
+    $db->Execute("INSERT INTO page (title, content) VALUES ('Page 3', 'Content 3')");
 
     return $db;
 }
