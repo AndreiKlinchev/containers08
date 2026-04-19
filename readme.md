@@ -27,31 +27,7 @@
 
 Структура проекта:
 
-```text
-containers08
-├── .github/
-│   └── workflows/
-│       └── main.yml
-├── site/
-│   ├── modules/
-│   │   ├── database.php
-│   │   └── page.php
-│   ├── templates/
-│   │   └── index.tpl
-│   ├── styles/
-│   │   └── style.css
-│   ├── config.php
-│   └── index.php
-├── sql/
-│   └── schema.sql
-├── tests/
-│   ├── testframework.php
-│   ├── tests.php
-│   ├── page_test.tpl
-│   └── page_test_2.tpl
-├── Dockerfile
-└── README.md
-```
+![Screen of project structure](<images/Project structure.png>)
 
 ### 2. Создание Web-приложения
 
